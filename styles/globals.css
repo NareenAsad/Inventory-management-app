@@ -13,15 +13,6 @@ html, body, #__next {
 #__next {
   display: flex;
 }
-
-.sidebar {
-  width: 250px;
-  background-color: #f4f4f4;
-}
-
-
-/* styles/globals.css */
-
 .layout {
   display: flex;
   min-height: 100vh;
@@ -30,6 +21,4 @@ html, body, #__next {
 
 main {
   flex: 1;
-  background-color: #D3BAE1;
-  color: #9053B5;
 }

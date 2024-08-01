@@ -1,19 +1,15 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import Sidebar from './Sidebar';
-import { Box, Flex } from "@chakra-ui/react";
+import { Box} from "@chakra-ui/react";
 import '../styles/globals.css';
 
-const Layout = ({ children, isAuthenticated }) => {
+const Layout = ({ children}) => {
   return (
-    <Flex minH="100vh" className="layout">
-      {isAuthenticated && <Sidebar />}
       <Box flex="1">
         <Container>
           <main>{children}</main>
         </Container>
       </Box>
-    </Flex>
   );
 };
 

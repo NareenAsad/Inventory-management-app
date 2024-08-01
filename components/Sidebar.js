@@ -23,7 +23,7 @@ const handleLogout = async () => {
 };
 
   return (
-    <Box bg="#9353b4" color="white" p={5} width="200px" height="auto" borderRadius="md">
+    <Box bg="#9353b4" color="white" p={5} width="200px" borderRadius="md">
       <VStack spacing={10} align="center" h="full">
         <Box textAlign="center">
           <Icon as={FaChartBar} w={8} h={8} mb={2} />
@@ -31,28 +31,28 @@ const handleLogout = async () => {
             Grow
           </Text>
         </Box>
-        <Link href="/dashboard" display="flex" alignItems="center" mt={2}>
+        <Link href="/dashboard" display="flex" alignItems="center" mt={2} fontFamily="-moz-initial">
           <Icon as={FaTachometerAlt} mr={2} />
           Dashboard
         </Link>
-        <Link href="/inventory" display="flex" alignItems="center" mt={2}>
+        <Link href="/inventory" display="flex" alignItems="center" mt={2} fontFamily="-moz-initial">
           <Icon as={FaBox} mr={2} />
           Inventory
         </Link>
-        <Link href="/suppliers" display="flex" alignItems="center" mt={2}>
+        <Link href="/suppliers" display="flex" alignItems="center" mt={2} fontFamily="-moz-initial">
           <Icon as={FaTruck} mr={2} />
           Suppliers
         </Link>
-        <Link href="/customers" display="flex" alignItems="center" mt={2}>
+        <Link href="/customers" display="flex" alignItems="center" mt={2} fontFamily="-moz-initial">
           <Icon as={FaUsers} mr={2} />
           Customers
         </Link>
-        <Link href="/orders" display="flex" alignItems="center" mt={2}>
+        <Link href="/orders" display="flex" alignItems="center" mt={2} fontFamily="-moz-initial">
           <Icon as={FaListAlt} mr={2} />
           Order Status
         </Link>
         <Spacer />
-        <Link href="#" display="flex" alignItems="center" mt={2} onClick={handleLogout}>
+        <Link href="/" display="flex" alignItems="center" mt={2} onClick={handleLogout} fontFamily="-moz-initial">
           <Icon as={FaSignOutAlt} mr={2} />
           Logout
         </Link>

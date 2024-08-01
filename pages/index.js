@@ -11,17 +11,13 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout isAuthenticated={false}>
-      {isClient && (
-        <Flex 
-          align="center" 
-          justify="center" 
-          minH="100vh" 
-          bg="gray.100"
-        >
-          <AuthForms />
-        </Flex>
-      )}
-    </Layout>
+    <Flex 
+        align="center" 
+        justify="center" 
+        minH="100vh" 
+        bg="gray.100"
+      >
+        <AuthForms />
+      </Flex>
   );
 }
