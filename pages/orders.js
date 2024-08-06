@@ -1,23 +1,14 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, {useState}from "react";
+import AddOrder from "@/components/AddOrder";
 import { Container, Button, Table, Thead, Tbody, Badge, Tr, Th, Td, TableContainer, IconButton, Flex, Icon, Heading, InputGroup, Input, InputLeftElement, Box, Image, Stack, Text } from '@chakra-ui/react';
 import { AddIcon, EditIcon, DeleteIcon, SearchIcon } from '@chakra-ui/icons';
-import { FiBell, FiLogOut, FiFileText } from 'react-icons/fi'; // Import FiFileText for invoice icon
+import { FiBell} from 'react-icons/fi';
 import Sidebar from '@/components/Sidebar';
 
-const initialOrders = [
-  { id: 1, name: 'Pravin', item: '20', number: '878223', orderno: 'SO1256', imageUrl: 'path_to_image_1.jpg', amount:'1000' ,status: 'delivered' },
-  { id: 2, name: 'Shiv', item: '10', number: '123456', orderno: 'SO4372', imageUrl: 'path_to_image_2.jpg',amount: '3000' , status:'approved'},
-  { id: 3, name: 'Om', item: '15', number: '987533', orderno: 'SO9987', imageUrl: 'path_to_image_3.jpg' ,amount: '3200', status:'delivered'},
-  { id: 4, name: 'Parth', item: '50', number: '224466', orderno: 'SO4523', imageUrl: 'path_to_image_4.jpg' ,amount: '2000', status:'delivered'},
-  { id: 5, name: 'Pawan', item: '44', number: '993366', orderno: 'SO6154', imageUrl: 'path_to_image_5.jpg',amount: '2500' , status:'not delivered'},
-  { id: 6, name: 'Samsat', item: '30', number: '554411', orderno: 'SO2876', imageUrl: 'path_to_image_6.jpg',amount: '1400' , status:'canceled'},
-  { id: 7, name: 'Tanishk', item: '45', number: '863649', orderno: 'SO0912', imageUrl: 'path_to_image_7.jpg',amount: '1200', status:'delivered' },
-  { id: 8, name: 'Bhuvan', item: '29', number: '098763', orderno: 'SO1144', imageUrl: 'path_to_image_8.jpg' ,amount: '4000', status:'approved'},
-];
+const initialOrders = [];
 
 const Orders = () => {
-  const [filter, setFilter] = useState('all'); // State to manage the filter
+  const [filter, setFilter] = useState('all');
 
   const handleFilter = (status) => {
     setFilter(status);
@@ -49,23 +40,23 @@ const Orders = () => {
         </Flex>
         <Container maxW="container.lg">
           <Flex justifyContent="flex-end" mb={4}>
-            <Link href="/add-order" passHref>
+          <Link href="/add-customer" passHref>
               <Button bg="#9353b4" textColor="white" leftIcon={<AddIcon />} fontFamily="-moz-initial">
-                Create Order
+                Add Order
               </Button>
             </Link>
           </Flex>
-          <TableContainer mt={4} bg="white" p={4} borderRadius="md">
+          <TableContainer mt={2} bg="white" p={4} borderRadius="md" boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)">
             <Table variant="simple">
-              <Thead>
+              <Thead bg="#9353b4">
                 <Tr>
                   <Th> </Th>
-                  <Th>Name</Th>
-                  <Th>Item Quantity</Th>
-                  <Th>Customer NO</Th>
-                  <Th>Sales order NO</Th>
-                  <Th>Amount</Th>
-                  <Th>Status</Th>
+                  <Th textColor="white">Name</Th>
+                  <Th textColor="white">Item Quantity</Th>
+                  <Th textColor="white">Customer NO</Th>
+                  <Th textColor="white">Sales order NO</Th>
+                  <Th textColor="white">Amount</Th>
+                  <Th textColor="white">Status</Th>
                 </Tr>
                 <Tr>
                   <Th colSpan={7}>

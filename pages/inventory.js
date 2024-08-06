@@ -1,23 +1,13 @@
-import React from 'react';
 import { Box, Text, SimpleGrid, Table, Thead, Tbody, Tr, Th, Td, Badge, IconButton, Image, Flex, Heading, InputGroup, InputLeftElement, Input, Stack, Icon } from '@chakra-ui/react';
 import { FiPlus, FiMinus, FiBell } from 'react-icons/fi';
 import { SearchIcon } from '@chakra-ui/icons';
 import Sidebar from '../components/Sidebar';
-
-const inventoryData = [
-  { image: 'rice.png', name: 'Rice', supplier: 'Pravin', status: 'High', price: '10,000' },
-  { image: 'sugar.png', name: 'Sugar', supplier: 'Shiv', status: 'Low', price: '5,000' },
-  { image: 'wheat.png', name: 'Wheat', supplier: 'Om', status: 'Low', price: '20,000' },
-  { image: 'toordal.png', name: 'Toor Dal', supplier: 'Parth', status: 'High', price: '55,000' },
-  { image: 'chilipowder.png', name: 'Chili Powder', supplier: 'Pawan', status: 'High', price: '25,000' },
-];
+const inventoryData = [];
 
 const Inventory = () => {
-  // Calculate totals and counts
   const totalStock = inventoryData.reduce((total, item) => total + parseInt(item.price.replace(',', '')), 0);
   const lowStockCount = inventoryData.filter(item => item.status === 'Low').length;
   const highStockCount = inventoryData.filter(item => item.status === 'High').length;
-
   return (
     <Flex direction={{ base: 'column', md: 'row' }} h="100vh">
       <Sidebar />
@@ -51,17 +41,17 @@ const Inventory = () => {
               <Text fontSize="2xl" fontWeight="bold">{highStockCount}</Text>
             </Box>
           </SimpleGrid>
-          <Box bg="white" shadow="md" p="5" borderRadius="md">
+          <Box mt={2} bg="white" p={4} borderRadius="md" boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)">
             <Table variant="simple">
-              <Thead>
+              <Thead bg="#9353b4">
                 <Tr>
-                  <Th>Image</Th>
-                  <Th>Product Name</Th>
-                  <Th>Supplier Name</Th>
-                  <Th>Stock Status</Th>
-                  <Th>Price</Th>
-                  <Th>Add</Th>
-                  <Th>Remove</Th>
+                  <Th textColor="white">Image</Th>
+                  <Th textColor="white">Product Name</Th>
+                  <Th textColor="white">Supplier Name</Th>
+                  <Th textColor="white">Stock Status</Th>
+                  <Th textColor="white">Price</Th>
+                  <Th textColor="white">Add</Th>
+                  <Th textColor="white">Remove</Th>
                 </Tr>
               </Thead>
               <Tbody>

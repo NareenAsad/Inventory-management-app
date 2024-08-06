@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import Layout from '../components/Layout';
-import AuthForms from '../components/AuthForms';
+import AuthForms from '@/components/AuthForms';
 import { Flex } from '@chakra-ui/react';
 
 export default function Home() {

@@ -1,10 +1,24 @@
-import React from 'react';
 import { Box, Button, Container, Flex, Heading, Icon, Input, Stack, Text, FormControl, FormLabel, Image, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import Sidebar from '@/components/Sidebar';
 import { FiBell } from 'react-icons/fi';
 
-const AddSupplier = () => {
+const AddSupplier = ({supplierSetting}) => {
+  const addsupplier = () => {
+    fetch("http://localhost:3000/supplier/addsupplier", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(sale),
+    })
+      .then((result) => {
+        alert("Supplier ADDED");
+        handlePageUpdate();
+        supplierSetting();
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <Flex direction={{ base: 'column', md: 'row' }} h="100vh">
       <Sidebar />
@@ -104,8 +118,8 @@ const AddSupplier = () => {
               </Flex>
             </FormControl>
             <Flex justifyContent="flex-end">
-              <Button bg="#9353b4" color="white" size="sm">
-                Save
+              <Button bg="#9353b4" color="white" size="sm" onClick={addsupplier}>
+                Add Supplier
               </Button>
             </Flex>
           </Stack>

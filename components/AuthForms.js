@@ -28,7 +28,7 @@ const AuthForms = () => {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find(user => user.email === email && user.password === password);
     if (user) {
-      router.push('/dashboard'); // Redirect to the dashboard after successful login
+      router.push('/dashboard');
     } else {
       toast({
         title: 'Login failed.',

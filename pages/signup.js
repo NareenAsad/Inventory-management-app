@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-const users = []; // This should be managed in a more persistent storage in a real application
+const users = [];
 
 const SignUp = () => {
   const formWidth = useBreakpointValue({ base: "90%", md: "50%" });
@@ -42,7 +42,7 @@ const SignUp = () => {
     } else {
       users.push({ name, email, password });
       localStorage.setItem('users', JSON.stringify(users));
-      router.push('/'); // Redirect to the sign-in page after successful sign-up
+      router.push('/');
     }
   };
 

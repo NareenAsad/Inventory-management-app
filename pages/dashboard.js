@@ -1,10 +1,8 @@
-// pages/dashboard.js
-import React from 'react';
+import React from "react";
 import { Box, Flex, Grid, Heading, Text, Stat, StatLabel, StatNumber, CircularProgress, CircularProgressLabel, Input, InputGroup, InputLeftElement, Image, Stack } from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
 import Sidebar from '@/components/Sidebar';
 
-const Dashboard = ({ userName }) => {
+const Dashboard = () => {
   return (
     <Flex direction={{ base: 'column', md: 'row' }} h="100vh">
       <Sidebar />
@@ -14,16 +12,10 @@ const Dashboard = ({ userName }) => {
             <Heading as="h1" size="md" color="black" mr={4} fontFamily="-moz-initial">
               Dashboard
             </Heading>
-            <InputGroup maxW="600px" mr={4}>
-              <InputLeftElement pointerEvents="none">
-                <SearchIcon color="gray" />
-              </InputLeftElement>
-              <Input placeholder="Search..." />
-            </InputGroup>
             <Flex alignItems="center" ml={4}>
-              <Stack spacing={1} align="flex-start">
+              <Stack>
                 <Text color="black" fontWeight="bold">
-                  Hello {userName}
+                  Hello Ali
                 </Text>
                 <Text color="black">
                   Welcome Back!
