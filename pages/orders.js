@@ -40,7 +40,7 @@ const Orders = () => {
         </Flex>
         <Container maxW="container.lg">
           <Flex justifyContent="flex-end" mb={4}>
-          <Link href="/add-customer" passHref>
+          <Link href="/add-order" passHref>
               <Button bg="#9353b4" textColor="white" leftIcon={<AddIcon />} fontFamily="-moz-initial">
                 Add Order
               </Button>
